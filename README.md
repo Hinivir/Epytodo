@@ -2,8 +2,9 @@
 
 The goal of the project was to make an API for a Todo, we had to do it in JavaScript with a SQL database and HTTP requests
 
-![sql](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg)
 ![JS](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg)
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="200" />
 
 ### The .env
 
