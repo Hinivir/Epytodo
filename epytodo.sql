@@ -1,0 +1,28 @@
+CREATE DATABASE IF NOT EXISTS epytodo;
+
+USE epytodo;
+
+CREATE USER IF NOT EXISTS 'bebou'@'localhost' IDENTIFIED BY 'bebou';
+GRANT ALL PRIVILEGES ON epytodo.* TO 'bebou'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE TABLE IF NOT EXISTS user
+(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    firstname VARCHAR(255) NOT NULL,
+    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS todo
+(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    duetime DATE NOT NULL,
+    user_id INT UNSIGNED NOT NULL,
+    status ENUM('not started', 'todo', 'in progress', 'done')
+);
